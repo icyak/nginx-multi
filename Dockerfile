@@ -9,6 +9,6 @@ ENV APP="http://127.0.0.1:8080"
 
 COPY start.sh start.sh
 CMD ["./start.sh"]
-CMD ["nginx -v"]
+CMD ["nginx", "-t"]
 
 EXPOSE 80
