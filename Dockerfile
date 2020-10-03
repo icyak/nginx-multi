@@ -12,3 +12,4 @@ CMD ["./start.sh"]
 
 
 EXPOSE 80
+RUN ["nginx", "-t"]
