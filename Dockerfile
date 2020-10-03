@@ -7,6 +7,7 @@ ENV APP="http://127.0.0.1:8080"
 
 COPY start.sh start.sh
 CMD ["./start.sh"]
+RUN ["cat /etc/nginx/conf.d/default.conf"]
 RUN ["nginx", "-t"]
 
 
