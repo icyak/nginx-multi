@@ -8,9 +8,7 @@ COPY default.conf /etc/nginx/conf.d
 ENV APP="http://127.0.0.1:8080"
 
 COPY start.sh start.sh
-RUN chmod +x start.sh
-RUN ["./start.sh"]
-
 
 EXPOSE 80
 RUN ["nginx", "-t"]
+CMD ["./start.sh"]
