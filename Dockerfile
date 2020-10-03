@@ -4,7 +4,7 @@ FROM nginx
 
 
 COPY default.conf /etc/nginx/conf.d
-RUN export APP="http://127.0.0.1:8080"
+ARG APP="http://127.0.0.1:8080"
 COPY start.sh start.sh
 CMD ["./start.sh"]
 #RUN ["ls -la /etc/nginx/conf.d"]
