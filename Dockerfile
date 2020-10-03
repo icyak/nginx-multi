@@ -4,11 +4,9 @@ FROM nginx
 
 COPY index.html /usr/share/nginx/html
 COPY default.conf /etc/nginx/conf.d
+CMD ["nginx", "-c", "/etc/nginx/conf.d/default.conf"]
 
 ENV APP="http://127.0.0.1:8080"
-
 COPY start.sh start.sh
 CMD ["./start.sh"]
-CMD ["nginx", "-t"]
-
 EXPOSE 80
